@@ -1,0 +1,695 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <!-- css bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!--icon-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- font icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- css file -->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+     <!-- AI Doctor Button -->
+     <button id="ai-doctor-btn" class="ai-doctor-btn" onclick="window.open('chatbot/index1.html','_blank')">
+        <i class="bi bi-robot"></i> AI Doctor
+    </button>
+
+    
+    
+    <!-- nav bar -->
+    <section class="sticky-top">
+
+        <nav class="navbar navbar-expand-lg bg-light ">
+            <div class="container">
+                <img src="{% static 'images/LOGO.png' %}" alt="logo of company" class="img-fluid logo-size">
+                <button class="navbar-toggler bg-primary border-0 " type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse ps-5 ms-5" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
+                        <li class="nav-item">
+                            <a class=" active text-info nav-link ps-3 " aria-current="page" href="#Home">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link ps-3" href="#Department">DEPARTMENT</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link ps-3" href="#Doctor">DOCTOR</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle ps-3" href="#Pages" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                PAGES
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">ABOUT</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">SERVICES </a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">ELEMENTS</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle ps-3" href="#Blog" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                BLOG
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">BLOG</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">BLOG DETAILS </a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link ps-3" href="#Contact">CONTACT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link ps-3" id="chatboat-toggle">CHATBOAT</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <!-- end nav bar -->
+    <!-- home -->
+    <section class="home" id="Home">
+        <!-- YouTube Video Background -->
+        <div class="video-background">
+            <video autoplay muted loop id="bg-video">
+                <source src="{% static 'images/video.mp4' %}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="home1 d-flex align-items-center">
+            <div class="container mt-5 pt-5">
+                <div class="home2 row ">
+                    <div class="col-lg-12 mt-5 text-light">
+                        <h1 class="fw-500">We Care for Your Health Every Moment</h1>
+                        <p class="mt-3 mb-5">"Providing Comprehensive and Compassionate Healthcare Solutions for Your Entire Family's Well-Being."
+                            </p>
+                        <a class="main_btn mr-10 text-decoration-none border-info rounded-1 pt-3 pb-3  ps-4 pe-4"
+                            href="#">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end home -->
+    <!-- Category -->
+    <section class="category section_gap" id="Department">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Left Side Containers -->
+                <div class="col-lg-3 bg-light p-4">
+                    <!-- Doctors Container -->
+                    <div class="doctors-container mb-4 text-center">
+                        <a href="{% static 'doctors.html' %}" class="text-decoration-none">
+                            <div class="card p-4 bg-primary text-white">
+                                <h3>Doctors</h3>
+                                <p>Find the best doctors for your health needs.</p>
+                            </div>
+                        </a>
+                    </div>
+        
+                    <!-- Hospitals Container -->
+                    <div class="hospitals-container text-center">
+                        <a href="{% static 'hospitals.html'%}" class="text-decoration-none">
+                            <div class="card p-4 bg-success text-white">
+                                <h3>Hospitals</h3>
+                                <p>Explore our state-of-the-art hospitals.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+        
+               
+         <!-- Right Side Content -->
+         <div class="col-lg-9 p-4">
+            <h1>Our Patient's Stories</h1>
+            <p>Follow your path to help. Make sure you know for patient outcomes that you can receive yourself quickly.</p>
+
+            <!-- Patient Stories Carousel -->
+            <div id="patientStoriesCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="card p-4">
+                            <p>"The outcome is extremely positive. I received great care and support throughout my treatment."</p>
+                            <h5>John Doe</h5>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <div class="card p-4">
+                            <p>"The hospital staff was very supportive. I felt at ease during my entire stay."</p>
+                            <h5>Jane Smith</h5>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="carousel-item">
+                        <div class="card p-4">
+                            <p>"Affordable and complete advice. I highly recommend this hospital for anyone in need."</p>
+                            <h5>Emily Brown</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#patientStoriesCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#patientStoriesCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="row">
+                <div class="post1 col-lg-4 mt-3 mb-3">
+                    <div class="post">
+                        <h3 class="text-center mb-3">Clinical Laboratory Test</h3>
+                        <img src="{% static 'images/xp1.jpg.pagespeed.ic.H2iNAI0AS3.webp' %}" alt="Procedure"
+                            class="img img-fluid  w-100">
+                        <div class="c2"><!-- when we move arrow to the three photo the box -->
+                            <div class="c3"><!--create a box in the in which there is text -->
+                                <div class="text-light">
+                                    <hr>
+                                </div>
+                                <a href="#" class="text-decoration-none">
+                                    <h5>Clinical laboratory tests</h5>
+                                </a>
+                                <div class="text-light">
+                                    <hr>
+                                </div>
+                                <p class="text-light"> We offer a wide range of diagnostic tests to help you understand your health better.</p>
+                                <a href="{% url 'schedule_appointment' %}" class="btn btn-light">Book Appointment</a><br><br>
+                                <button class="btn btn-light">your report</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="post1 col-lg-4 mt-3 mb-3">
+                    <div class="post">
+                        <h3 class="text-center mb-3">Vision Health Check</h3>
+                        <img src="{% static 'images/eye.jpg' %}" alt="Procedure"
+                            class="img img-fluid  w-100">
+                        <div class="c2">
+                            <div class="c3">
+                                <div class="text-light">
+                                    <hr>
+                                </div>
+                                <a href="#" class="text-decoration-none">
+                                    <h5>Vision Health Check</h5>
+                                </a>
+                                <div class="text-light">
+                                    <hr>
+                                </div>
+                                <p class="text-light">Protect your eyesight; make eye tests a priority in your healthcare routine.</p>
+                                <a href="{% url 'schedule_appointment' %}" class="btn btn-light">Book Appointment</a><br><br>
+                                <button class="btn btn-light">your report</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="post1 col-lg-4 mt-3 mb-3">
+                    <div class="post">
+                        <h3 class="text-center mb-3">Dermatological Skin Exam</h3>
+                        <img src="{% static 'images/xp3.jpg.pagespeed.ic.QlSGq7ZihA.webp' %}" alt="Procedure" class=" img img-fluid">
+                        <div class="c2">
+                            <div class="c3">
+                                <div class="text-light">
+                                    <hr>
+                                </div>
+                                <a href="#" class="text-decoration-none">
+                                    <h5>Dermatological Skin Exam</h5>
+                                </a>
+                                <div class="text-light">
+                                    <hr>
+                                </div>
+                                <p class="text-light">Skin health should be a top priority. Don't ignore what your skin is telling you</p>
+                                <a href="{% url 'schedule_appointment' %}" class="btn btn-light">Book Appointment</a><br><br>
+                                <button class="btn btn-light">your report</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--end Category -->
+    <!-- Myself -->
+    <section class="myself pad_bottom pt-5 pb-5" id="Doctor">
+        <div class="container  bg-light">
+            <div class="row">
+                <div class="col-lg-6 pr-0">
+                    <div class="about_img">
+                        <img class="img-fluid w-100 h-100" src="{% static 'images/xabout-me.jpg.pagespeed.ic.xzSAvjrmiC.webp' %}"
+                            alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 pl-0 ps-5 pe-5 ">
+                    <div class="about">
+                        <div class="about1 text-left  ">
+                            <h1 class="pt-2">About Myself</h1>
+                            <p class="pt-2 pb-1 text-secondary">
+                                nappropriate behavior is often laughed off as “boys will be boys,” women face higher
+                                conduct standards especially in the
+                                workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond
+                                reproach.
+                            </p>
+                        </div>
+                        <div class="activity text-center">
+                            <div class="row">
+                                <div class="col-lg-5 col-md-5 ms-2 me-2 mt-2 mb-2 border shadow">
+                                    <div class="activity_box">
+                                        <div class=" pt-1 pb-1 text-info">
+                                            <i class="fa-solid fa-database display-5"></i>
+                                        </div>
+                                        <h3>$<span class="counter"></span>2.5</h3>
+                                        <p>Total Donation</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-md-5  ms-2 me-2 mt-2 mb-2 border shadow">
+                                    <div class="activity_box">
+                                        <div class=" pt-1 pb-1 text-info">
+                                            <i class="bi bi-bookmarks display-5"></i>
+                                        </div>
+                                        <h3>$<span class="counter"></span>1465</h3>
+                                        <p>Total Project</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-md-5 border ms-2 me-2 mt-2 mb-2 shadow">
+                                    <div class="activity_box">
+                                        <div class=" pt-1 pb-1 text-info">
+                                            <i class="bi bi-people display-5"></i>
+                                        </div>
+                                        <h3>$<span class="counter"></span>3965</h3>
+                                        <p>Total Volunteers</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-md-5  ms-2 me-2 mt-2 mb-2 shadow">
+                                    <div class="activity_box">
+                                        <div class=" pt-1 pb-1 text-info">
+                                            <i class="bi bi-people display-5 pt-1 pb-1"></i>
+                                        </div>
+                                        <h3>$<span class="counter"></span>3965</h3>
+                                        <p>Total Volunteers</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end Myself -->
+
+    <!-- feedback -->
+    <section class="feedback bg-light pt-5 pb-5">
+        <div class="container pt-5 pb-5">
+            <div class="row justify-content-center section-title-wrap">
+                <div class="f1 col-lg-12 text-center">
+                    <h1>Enjoy our Client’s Feedback</h1>
+                    <p class="pt-3 pb-5">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="{% static 'images/xfeedback-bg.jpg.pagespeed.ic.UPqQ-jYwE3.webp' %}" alt="" class="img-fluid">
+                </div>
+                <div class="col-lg-6 pt-5">
+                    <div class="feedback1">
+                        <div class="d-flex flex-row">
+                            <h4 class="">Fannie Rowe</h4>
+                            <div class="star ps-4 text-warning">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star text-secondary"></span>
+                            </div>
+                        </div>
+                        <p class="text-secondary">
+                            Accessories Here you can find the best computer accessory for your
+                            laptop, monitor, printer, scanner, speaker. Here you can
+                            find the best computer accessory for your laptop, monitor, printer,
+                            scanner, speaker.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end feedback -->
+    <!-- offered -->
+    <section class="service section_gap pt-5 pb-5" id="Pages">
+        <div class="container pt-5 pb-5">
+            <div class="row justify-content-center service1">
+                <div class="s1 col-lg-12 text-center">
+                    <h1>Our Offered Services</h1>
+                    <p class="pt-3 pb-5">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 text-center mt-2 mb-2">
+                    <div class="service2">
+                        <i class="bi bi-airplane display-6 text-info"></i>
+                        <a href="#" class="text-decoration-none">
+                            <h4 class="pt-3 pb-3">24/7 Emergency</h4>
+                        </a>
+                        <p class="text-secondary">
+                            inappropriate behavior is often laughed off as “boys will be boys,” women face higher
+                            conduct women face higher conduct.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center mt-2 mb-2">
+                    <div class="service2">
+                        <i class="bi bi-heart-pulse  display-6 text-info"></i>
+                        <a href="#" class="text-decoration-none">
+                            <h4 class="pt-3 pb-3">Expert Consultation</h4>
+                        </a>
+                        <p class="text-secondary">
+                            inappropriate behavior is often laughed off as “boys will be boys,” women face higher
+                            conduct women face higher conduct.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center mt-2 mb-2">
+                    <div class="service2">
+                        <i class="bi bi-bug  display-6 text-info"></i>
+                        <a href="#" class="text-decoration-none">
+                            <h4 class="pt-3 pb-3">Intensive Care</h4>
+                        </a>
+                        <p class="text-secondary">
+                            inappropriate behavior is often laughed off as “boys will be boys,” women face higher
+                            conduct women face higher conduct.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center mt-2 mb-2">
+                    <div class="service2">
+                        <i class="bi bi-people  display-6 text-info"></i>
+                        <a href="#" class="text-decoration-none">
+                            <h4 class="pt-3 pb-3">Family Planning</h4>
+                        </a>
+                        <p class="text-secondary">
+                            inappropriate behavior is often laughed off as “boys will be boys,” women face higher
+                            conduct women face higher conduct.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end offered -->
+    <!-- form  -->
+    <section class="appointment pt-4 pb-4">
+        <div class="container">
+            <div class="row justify-content-between align-items-center appointment-wrap">
+                <div class="col-lg-5 col-md-6 appointment1">
+                    <h1 class="ps-4">
+                        Servicing Hours
+                    </h1>
+                    <p class="ps-4">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                    </p>
+                    <ul class="time-list">
+                        <li class="d-flex justify-content-between">
+                            <span>Monday-Friday</span>
+                            <span>08.00 am - 10.00 pm</span>
+                        </li>
+                        <div class="text-secondary">
+                            <hr>
+                        </div>
+                        <li class="d-flex justify-content-between">
+                            <span>Saturday</span>
+                            <span>08.00 am - 10.00 pm</span>
+                        </li>
+                        <div class="text-secondary">
+                            <hr>
+                        </div>
+                        <li class="d-flex justify-content-between">
+                            <span>Sunday</span>
+                            <span>08.00 am - 10.00 pm</span>
+                        </li>
+                        <div class="text-secondary">
+                            <hr>
+                        </div>
+                    </ul>
+                </div>
+                <div class="a1 col-lg-6 col-md-6 bg-white shadow">
+                    <div class="appointment2 pt-3 pb-5">
+                        <form class="form-wrap" action="/submit_appointment" method="POST">
+                            <h3 class="pb-20 text-center pb-2">Book an Appointment</h3>
+                            <input type="text" class="form-control mt-2 mb-2" name="name" placeholder="Patient Name" required>
+                            <input type="text" class="form-control mt-2 mb-2" name="phone" placeholder="Phone" required>
+                            <input type="email" class="form-control mt-2 mb-2" name="email" placeholder="Email Address" required>
+                            <input id="datepicker1" name="dop" class="dates form-control mt-2 mb-2" placeholder="Date of Birth" type="date" required>
+                            <select class="form-select form-select-sm mt-2 mb-2" name="disease_type" aria-label=".form-select-sm example" required>
+                                <option selected disabled>which appointment</option>
+                                <option value="Type One">Clinical laboratory test</option>
+                                <option value="Type Two">Vision Health Check</option>
+                                <option value="Type Three">Dermatological Skin Exam</option>
+                                
+                            </select>
+                            <input id="datepicker2" name="appointment_date" class="dates form-control mt-2 mb-2" placeholder="Appointment Date" type="date" required>
+                            <textarea name="messege" class="w-100 mt-2 mb-2" rows="6" placeholder="Message"></textarea>
+                            <div class="confirm text-center confirm_btn_box">
+                                <button type="submit" class="main_btn text-uppercase mt-2 mb-2 pt-2 pb-2 ps-3 pe-3">Confirm Booking</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end form -->
+    <!-- Blog -->
+    <section class="blog mt-5 mb-5 pt-5 pb-5" id="Blog">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="B1 col-lg-12">
+                    <h1 class="pt-4">Our Recent Blogs</h1>
+                    <p class="pt-3 pb-3">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="blog1 col-lg-4 col-md-4">
+                    <div class="blog2 pt-3 pb-3">
+                        <img class="f-img img-fluid w-100" src="{% static 'images/xb1.jpg.pagespeed.ic.wPUMm-P7hw.webp' %}" alt="">
+                    </div>
+                    <a href="#" class="text-decoration-none">
+                        <h4 class="pt-2 pb-2">Portable Fashion for women</h4>
+                    </a>
+                    <p class="pt-2 pb-2 text-secondary">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud.
+                    </p>
+                    <div class="bottom d-flex justify-content-between align-items-center flex-wrap">
+                        <div class="blog3 text-secondary">
+                            <i class="bi bi-calendar3"></i> 13th Dec
+                            <i class="bi bi-heart ps-2 pe-2"></i> 15
+                            <i class="bi bi-chat ps-2 pe-2"></i> 04
+                        </div>
+                    </div>
+                </div>
+                <div class="blog1 col-lg-4 col-md-4">
+                    <div class="blog2  pt-3 pb-3">
+                        <img class="f-img img-fluid w-100" src="{% static 'images/xb2.jpg.pagespeed.ic.9d6gO-IS1Q.webp' %}" alt="">
+                    </div>
+                    <a href="#" class="text-decoration-none">
+                        <h4 class="pt-2 pb-2">Summer ware are coming</h4>
+                    </a>
+                    <p class="pt-2 pb-2 text-secondary">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud.
+                    </p>
+                    <div class="bottom d-flex justify-content-between align-items-center flex-wrap">
+                        <div class="blog3 text-secondary">
+                            <i class="bi bi-calendar3"></i> 13th Dec
+                            <i class="bi bi-heart ps-2 pe-2"></i> 15
+                            <i class="bi bi-chat ps-2 pe-2"></i> 04
+                        </div>
+                    </div>
+                </div>
+                <div class="blog1 col-lg-4 col-md-4">
+                    <div class="blog2 pt-3 pb-3">
+                        <img class="f-img img-fluid w-100" src="{% static 'images/xb3.jpg.pagespeed.ic.ycNs_Tfir0.webp' %}" alt="">
+                    </div>
+                    <a href="#" class="text-decoration-none">
+                        <h4 class="pt-2 pb-2">Summer ware are coming</h4>
+                    </a>
+                    <p class="pt-2 pb-2 text-secondary">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud.
+                    </p>
+                    <div class="bottom d-flex justify-content-between align-items-center flex-wrap">
+                        <div class="blog3 text-secondary">
+                            <i class="bi bi-calendar3"></i> 13th Dec
+                            <i class="bi bi-heart ps-2 pe-2"></i> 15
+                            <i class="bi bi-chat ps-2 pe-2"></i> 04
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end Blog -->
+    <!-- footer -->
+    <footer class="footer  pt-3 pb-3 bg-dark" id="Contact">
+        <div class="container pt-5 pb-5 mt-5 mb-3">
+            <div class="row">
+                <div class="col-lg-2  col-md-6">
+                    <div class="footer1">
+                        <h6 class="ms-4 text-light">Top Products</h6>
+                        <ul class="footer-nav ">
+                            <li class=" pt-2 pb-1">
+                                <a href="#" class="text-decoration-none text-secondary">Managed Website</a>
+                            </li>
+                            <li  class=" pt-1 pb-1">
+                                <a href="#"  class="text-decoration-none text-secondary">Manage Reputation</a>
+                            </li>
+                            <li  class=" pt-1 pb-1">
+                                <a href="#"  class="text-decoration-none text-secondary">Power Tools</a>
+                            </li>
+                            <li  class=" pt-1 pb-1">
+                                <a href="#"  class="text-decoration-none text-secondary">Marketing Service</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4  col-md-6 ">
+                    <div class="footer1 mail-chimp">
+                        <h6 class="mb-20 text-light">Contact Us</h6>
+                        <p class=" pt-2 pb-1 text-secondary">
+                            56/8, Santa bullevard, Rocky beach, San fransisco, Los angeles, USA
+                        </p>
+                        <h3 class="text-light">012-6532-568-9746</h3>
+                        <h3 class="text-light">012-6532-568-97468</h3>
+                    </div>
+                </div>
+                <div class="col-lg-6  col-md-12">
+                    <div class="footer1 newsletter">
+                        <h6 class="text-light">Newsletter</h6>
+                        <p class="text-secondary  pt-2 pb-1">You can trust us. we only send promo offers, not a single spam.</p>
+                        <div id="mc_embed_signup">
+                            <form>
+                                <div class="form-group row">
+                                    <div class="col-lg-7 col-md-6 col-sm-12 mt-3 mb-2">
+                                        <input name="EMAIL" placeholder="Your Email Address" class="nw1 border-0 pt-2 pb-2 ps-3 pe-5 rounded-pill" type="email">
+                                    </div>
+                                    <div class="col-lg-5 col-md-12 mt-3 mb-2">
+                                        <button class="nw-btn main_btn circle pt-2 pb-2 ps-4 pe-5 rounded-pill">get started
+                                            <i class="bi bi-arrow-right-short"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="info"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row footer-bottom d-flex justify-content-between pt-5 mt-5 text-center">
+                <p class="col-lg-8 col-sm-12 footer-text m-0 text-light">
+                    Copyright ©
+                    2022 All rights reserved | This template
+                    is made with <i class="bi bi-heart text-info"></i> by <a href="#" class="text-decoration-none text-info">Colorlib</a>
+
+                </p>
+                <div class="col-lg-4 col-sm-12 footer-social">
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f  border-dark pt-2 pb-2 ps-3 pe-3 ms-2 me-2"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-twitter  border-dark pt-2 pb-2 ps-3 pe-3 ms-2 me-2"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-dribbble  border-dark pt-2 pb-2 ps-3 pe-3 ms-2 me-2"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-behance  border-dark pt-2 pb-2 ps-3 pe-3 ms-2 me-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+    
+    <!-- end footer -->
+     <!-- Include jQuery and jQuery UI -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+
+<!-- Initialize Date Pickers -->
+<script>
+    $(function() {
+        $("#datepicker1").datepicker({
+            dateFormat: "yy-mm-dd", // Format for MySQL
+            changeMonth: true,
+            changeYear: true,
+            yearRange: "1900:2023"
+        });
+
+        $("#datepicker2").datepicker({
+            dateFormat: "yy-mm-dd", // Format for MySQL
+            minDate: 0 // Disable past dates
+        });
+    });
+</script>
+
+
+
+
+
+    <!-- js file -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+
+
+        
+</body>
+
+</html>
