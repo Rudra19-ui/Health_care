@@ -1,16 +1,23 @@
+/* Main body styling */
 body {
-   
-    background-size: cover;
-    background-position: center;
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative; /* For absolute positioning of back button */
 }
 
+/* Back button positioning - stays top-left */
+.container.mt-3 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+/* Center the chatbot container */
 .chatbot-container {
     width: 400px;
     background-color: #fff;
@@ -19,8 +26,13 @@ body {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    margin: auto; /* This centers the container */
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
+/* Rest of your original styles remain exactly the same */
 .chatbot-header {
     background-color: #3dee57;
     color: white;

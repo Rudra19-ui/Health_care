@@ -1,6 +1,5 @@
 from django.db import models
 
-
 class Appointment(models.Model):
     SERVICE_CHOICES = [
         ('Clinical Laboratory Test', 'Clinical Laboratory Test'),
@@ -16,3 +15,25 @@ class Appointment(models.Model):
 
     def __str__(self):
         return f"{self.name} - {self.service_type}"
+
+
+class Doctor(models.Model):
+    SPECIALIZATION_CHOICES = [
+        ('Cardiology', 'Cardiology'),
+        ('Neurology', 'Neurology'),
+        ('Dermatology', 'Dermatology'),
+        ('Pediatrics', 'Pediatrics'),
+        ('Oncology', 'Oncology'),
+    ]
+    
+    name = models.CharField(max_length=100)
+    specialization = models.CharField(max_length=50, choices=SPECIALIZATION_CHOICES)
+    hospital = models.CharField(max_length=100)
+    bio = models.TextField()
+    contact = models.CharField(max_length=100)
+    photo = models.ImageField(upload_to='doctors/')
+    available_days = models.CharField(max_length=100)
+    available_time = models.CharField(max_length=100)
+
+    def __str__(self):
+        return f"Dr. {self.name} - {self.specialization}"

@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nearby Hospitals</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   <style>
+        #map{
+            height: 400px;
+            width: 100%;
+            margin-top:20px;
+        }
+</style>
+</head>
+<body>
+
+<div class="container mt-5">
+        <h1 class="text-center mb-4">Hospitals in Maharashtra</h1>
+        
+<div class="mb-4">
+            <input type="text" id="location" class="form-control" placeholder="Enter your location (address)">
+            <button id="viewLocation" class="btn btn-primary mt-2">View Nearby Hospitals</button>
+</div>
+<div class="row">
+            <ul id ="hospital-list"></ul>
+
+
+<!-- Hospital 1 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Apollo Hospital,</h5>
+                        <p class="card-text">Location: Mumbai, Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/aAHm1LoXvM75xwVU9" target="_blank" class="btn btn-primary">View Location</a>
+                        </div> 
+                        </div>
+                        </div>
+<!-- Hospital 2 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Fortis Hospital,mulund</h5>
+                        <p class="card-text">Location: Mumbai,Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/raDfYYPLfo2XzqYa6" target="_blank" class="btn btn-primary">View Location</a>
+                        </div>
+                        </div>
+                        </div>
+<!-- Hospital 3 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Ruby Hall Clinic</h5>
+                        <p class="card-text">Location: Pune, Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/GEQkKfh1LgBiECt99" target="_blank" class="btn btn-primary">View Location</a>
+                        </div>
+                        </div>
+                        </div>
+
+
+<!-- Hospital 4 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Dr. Ujwala Vivek Bhosale
+                        <br>Eye Clinic Hospital<br></h5>
+                        <p class="card-text">Location: Satara, Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/UBohE2afjZjqVPrg8" target="_blank" class="btn btn-primary">View Location</a>
+                        </div>
+                        </div>
+                        </div>
+
+<!-- Hospital 5 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Ashwini Sahakari Rugnalaya
+                        <br>ani Sanshodhan Kendra<br></h5>
+                        <p class="card-text">Location: Solapur, Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/yqmDceGua6nbydUt6" target="_blank" class="btn btn-primary">View Location</a>
+                        </div>
+                        </div>
+                        </div>
+
+<!-- Hospital 6-->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Chandan Neuro <br>science Hospital<br></h5>
+                        <p class="card-text">Location: Solapur, Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/dbw1i76nwvatnNNk9" target="_blank" class="btn btn-primary">View Location</a>
+                        </div>
+                        </div>
+                        </div>
+
+<!-- Hospital 7 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">AIIMS Hospital Mihan Nagar,AHMNN</h5>
+                        <p class="card-text">Location: Nagpur, Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/sZdbrJB4xn6vNTog8" target="_blank" class="btn btn-primary">View Location</a>
+                        </div>
+                        </div>
+                        </div>
+
+<!-- Hospital 8 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Bharatratna Dr. Babasaheb Ambedkar<br> Mun. Gen. Hospital, Kandivali<br></h5>
+                        <p class="card-text">Location: Mumbai, Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/M6QELHgsYTo2BqPN8" target="_blank" class="btn btn-primary">View Location</a>
+                        </div>
+                        </div>
+                        </div>
+
+<!-- Hospital 9 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Ashoka Medicover Hospital<br> Nashik New<br></h5>
+                        <p class="card-text">Location: Nashik, Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/N1rVkHrVJitESeAE6" target="_blank" class="btn btn-primary">View Location</a>
+                        </div>
+                        </div>
+                        </div>
+
+<!-- Hospital 10 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Six Sigma Medicare And
+                        <br>Research Ltd Nashik<br></h5>
+                        <p class="card-text">Location: Nashik, Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/dPxuS9LiZpFAkkwUA" target="_blank" class="btn btn-primary">View Location</a>
+                        </div>
+                        </div>
+                        </div>
+
+<!-- Hospital 11-->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Rajiv Gandhi Super Speciality
+                        <br> Hospital,Dapoli<br></h5>
+                        <p class="card-text">Location:pune, Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/47KtVijFXesd3Z4D8" target="_blank" class="btn btn-primary">View Location</a>
+                        </div>
+                        </div>
+                        </div>
+
+<!-- Hospital 12 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">VIGHNAHARTA ACCIDENT HOSPITAL
+                        <br> ADVANCED TRAUMA CENTER<br></h5>
+                        <p class="card-text">Location:pune, Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/dLxPhbrXSAbkyfNo9" target="_blank" class="btn btn-primary">View Location</a>
+                        </div>
+                        </div>
+                        </div>
+
+<!-- Hospital 13 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Nimbalkar Hospital Baramati</h5>
+                        <p class="card-text">Location: Pune, Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/HKdDQvtMK54jVe2aA" target="_blank" class="btn btn-primary">View Location</a>
+                        </div>
+                        </div>
+                        </div>
+
+<!-- Hospital 14 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Vijayalaxmi Maternity
+                        <br> Surgical And General
+                            Hospital Nallasopara<br></h5>
+                        <p class="card-text">Location: Mumbai, Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/vk1Gygnc83X6nz9v8" target="_blank" class="btn btn-primary">View Location</a>
+                        </div>
+                        </div>
+                        </div>
+
+<!-- Hospital 15 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Gayatri Super Speciality
+                        <br> Hospital And Critical
+                            Care Center Latur<br></h5>
+                        <p class="card-text">Location: latur, Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/skf4Wpena3TuPjFp7" target="_blank" class="btn btn-primary">View Location</a>
+                        </div>
+                        </div>
+                        </div>
+                        
+<!-- Hospital 16 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Shri Dhanvantari Mulvyadh
+                        <br> Bhagandar Ayurved Hospital<br></h5>
+                        <p class="card-text">Location:pune, Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/6onHiGJEE7RDwbU86" target="_blank" class="btn btn-primary">View Location</a>
+                        </div>
+                        </div>
+                        </div>
+                         
+                        
+<!-- Hospital 17 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Poona Hospital and 
+                            research centre</h5>
+                        <p class="card-text">Location: Pune, Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/GKWnSBmX3k36SbSJ6" target="_blank" class="btn btn-primary">View Location</a>
+                        </div>
+                        </div>
+                        </div>
+<!-- Hospital 18 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Sahyadri Super Speciality 
+                            Hospital Hadapsar</h5>
+                        <p class="card-text">Location: Pune, Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/LU77kFpfZgXCZu3k7" target="_blank" class="btn btn-primary">View Location</a>
+                        </div>
+                        </div>
+                        </div>
+
+<!-- Hospital 19-->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Jehangir Hospital</h5>
+                        <p class="card-text">Location: Pune, Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/skf4Wpena3TuPjFp7" target="_blank" class="btn btn-primary">View Location</a>
+                        </div>
+                        </div>
+                        </div>
+
+<!-- Hospital 20 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Sahyadri Super Speciality 
+                            Hospital</h5>
+                        <p class="card-text">location: Nashik, Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/5Jx2oVrAVqeR8Qa19" target="_blank" class="btn btn-primary">View Location</a>
+                        </div>
+                        </div>
+                        </div>
+
+<!-- Hospital 21-->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Kingsway Hospitals</h5>
+                        <p class="card-text">Location: Nagpur, Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/vCxyGCwCoE6et2Rz6" target="_blank" class="btn btn-primary">View Location</a>
+                        </div>
+                        </div>
+                        </div>
+
+<!-- Hospital 22 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Nashik Rugnalaya</h5>
+                        <p class="card-text">Location: Nashik, Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/BjLVSz3suC31jEw46" target="_blank" class="btn btn-primary">View Location</a>
+                        </div>
+                        </div>
+                        </div>
+
+<!-- Hospital 23 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Namco Charitable Trust 
+                            Multispeciality Hospital</h5>
+                        <p class="card-text">Location: Nashik, Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/iybekox17Rwr8W4JA" target="_blank" class="btn btn-primary">View Location</a>
+                        </div>
+                        </div>
+                        </div>
+
+<!-- Hospital 24 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                <div class="card-body">
+                        <h5 class="card-title">Kamla Nehru Hospital</h5>
+                        <p class="card-text">Location: Pune, Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/Jg8E2esyR88kbZye7" target="_blank" class="btn btn-primary">View Location</a>
+                        </div>
+                        </div>
+                        </div>
+
+<!-- Hospital 25 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Government Medical College & Hospital</h5>
+                        <p class="card-text">Location: Aurangabad, Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/xCxUJbeFERZ7xKGL9" target="_blank" class="btn btn-primary">View Location</a>
+                        </div>
+                        </div>
+                        </div>
+
+<!-- Hospital 26 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Kamalnayan Bajaj Hospital</h5>
+                        <p class="card-text">Location: Aurangabad, Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/iUWEbgzWJxxcFEpeA" target="_blank" class="btn btn-primary">View Location</a>
+                        </div>
+                        </div>
+                        </div>
+
+<!-- Hospital 27 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Government hospitals</h5>
+                        <p class="card-text">Location: Jalgoan, Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/nxsr3CiuMd7kJVa66" target="_blank" class="btn btn-primary">View Location</a>
+                        </div>
+                        </div>
+                        </div>
+
+<!-- Hospital 28 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Civil Hospital</h5>
+                        <p class="card-text">Location: Nashik, Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/bg79w2x9nVRzpKVq8" target="_blank" class="btn btn-primary">View Location</a>
+                        </div>
+                        </div>
+                        </div>
+
+<!-- Hospital 29 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Indira Gandhi Government Medical College 
+                            & Hospital,Nagpur</h5>
+                        <p class="card-text">Location: Nagpur, Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/AFHyCajAGub3BnxJ9" target="_blank" class="btn btn-primary">View Location</a>
+                        </div>
+                        </div>
+                        </div>
+
+<!-- Hospital 30 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Vishvanath Hospital</h5>
+                        <p class="card-text">Location: Bhusawal, Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/Uk7rGMwQVri5GShx6" target="_blank" class="btn btn-primary">View Location</a>
+                        </div>
+                        </div>
+                        </div>
+
+<!-- Hospital 31 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Dr.Vikhe Patil Memorial Hospital</h5>
+                        <p class="card-text">Location: Ahmednagar, Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/6QFXEmdCKccvhwQV6" target="_blank" class="btn btn-primary">View Location</a>
+                        </div>
+                        </div>
+                        </div>
+
+<!-- Hospital 32 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Swasthya Hospital And 
+                            Medical Research Center</h5>
+                        <p class="card-text">Location: Ahmednagar, Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/QhAGYm3dWDKp4MMP9" target="_blank" class="btn btn-primary">View Location</a>
+                        </div>
+                        </div>
+                        </div>
+
+<!-- Hospital 33 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Sanjeevani Accident Hospital</h5>
+                        <p class="card-text">Location: Akola, Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/gzrYLAzXdWq1tNrr8" target="_blank" class="btn btn-primary">View Location</a>
+                        </div>
+                        </div>
+                        </div>
+
+<!-- Hospital 34 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Jalna Hospital</h5>
+                        <p class="card-text">Location: Jalna, Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/61dW2h3eSSGHj1aw9" target="_blank" class="btn btn-primary">View Location</a>
+                        </div>
+                        </div>
+                        </div>
+
+<!-- Hospital 35 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Vilasrao Deshmukh Government 
+                            <br>Medical College and 
+                            MultiSpeciality Hospital<br></h5>
+                        <p class="card-text">Location: latur, Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/7hVzgYiTqSDQWiPG8" target="_blank" class="btn btn-primary">View Location</a>
+                        </div>
+                        </div>
+                        </div>
+
+<!-- Hospital 36-->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Gojamgunde
+                             <br>Hospital<br></h5>
+                        <p class="card-text">Location: latur, Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/f8iXn1myYrLgSfvL7" target="_blank" class="btn btn-primary">View Location</a>
+                        </div>
+                        </div>
+                        </div>
+
+<!-- Hospital 37-->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">District Hospital</h5>
+                        <p class="card-text">Location: Buldana, Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/UpFE35HPbMVnT8Pi6" target="_blank" class="btn btn-primary">View Location</a>
+                        </div>
+                        </div>
+                        </div>
+
+<!-- Hospital 38 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Rural Hospital</h5>
+                        <p class="card-text">Location: Buldana, Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/MXWZVNn24XVVVEh7A" target="_blank" class="btn btn-primary">View Location</a>
+                        </div>
+                        </div>
+                        </div>
+
+<!-- Hospital 39 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">General Hospital</h5>
+                        <p class="card-text">Location: khamgaon, Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/LGWpGRp8qtUAxhti8" target="_blank" class="btn btn-primary">View Location</a>
+                        </div>
+                        </div>
+                        </div>
+
+<!-- Hospital 40 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">S.G.G.S Memorial
+                        <br>Government Hospital<br></h5>
+                        <p class="card-text">Location: Nanded,Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/zXinAtqpbchpRVUV7" target="_blank" class="btn btn-primary">View Location</a>
+                        </div>
+                        </div>
+                        </div>
+
+<!-- Hospital 41 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Deccan malti 
+                        <br>superspeciality Hospital<br></h5>
+                        <p class="card-text">Location: Sangli, Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/TLcqYB9NezKvwcFY8" target="_blank" class="btn btn-primary">View Location</a>
+                        </div>
+                        </div>
+                        </div>
+
+<!-- Hospital 42 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Dr.Ghatage MultiSpeciality
+                        <br>Hospital & Research center<br></h5>
+                        <p class="card-text">Location: Sangli, Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/sWwYYb3k8bHxURpg9" target="_blank" class="btn btn-primary">View Location</a>
+                        </div>
+                        </div>
+                        </div>
+
+<!-- Hospital 43 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title"> Shiv Hospital and critical
+                        <br>care centre<br></h5>
+                        <p class="card-text">Location: Buldana, Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/9PiaknLjm5S7Av1eA" target="_blank" class="btn btn-primary">View Location</a>
+                        </div>
+                        </div>
+                        </div>
+
+<!-- Hospital 44 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Shree Mahakali Hospital</h5>
+                        <p class="card-text">Location: Dhule, Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/omfmkVjE3QGv51Zy8" target="_blank" class="btn btn-primary">View Location</a>
+                        </div>
+                        </div>
+                        </div>
+
+<!-- Hospital 45 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Shri shiddeshwar
+                        <br>MultiSpeciality Hospital<br></h5>
+                        <p class="card-text">Location: Dhule, Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/8HvS4ZSpX9hPxPhM6" target="_blank" class="btn btn-primary">View Location</a>
+                        </div>
+                        </div>
+                        </div>
+
+<!-- Hospital 46-->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Aashta hospital
+                        <br>and research centre<br></h5>
+                        <p class="card-text">Location: Chandrapur, Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/8DKbHNgbXVs9pMyX6" target="_blank" class="btn btn-primary">View Location</a>
+                        </div>
+                        </div>
+                        </div>
+
+<!-- Hospital 47 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">GURUDRISHTI NETRALAYA AND SUPER
+                        <br>SPECIALITY HOSPITAL<br></h5>
+                        <p class="card-text">Location: Chandrapur, Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/skf4Wpena3TuPjFp7" target="_blank" class="btn btn-primary">View Location</a>
+                        </div>
+                        </div>
+                        </div>
+
+<!-- Hospital 48 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Lokmanya Hospital PVT LTD</h5>
+                        <p class="card-text">Location: Kolhapur, Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/eJ6M3ozkNZ3QZXem9" target="_blank" class="btn btn-primary">View Location</a>
+                        </div>
+                        </div>
+                        </div>
+
+<!-- Hospital 49-->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Siddhant Hospital <br>and reserch center<br></h5>
+                        <p class="card-text">Location: Kolhapur, Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/tGQtH6ytVaMZqcNY8" target="_blank" class="btn btn-primary">View Location</a>
+                        </div>
+                        </div>
+                        </div>
+
+<!-- Hospital 50 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Shree Sankalp Hospital</h5>
+                        <p class="card-text">Location: Nashik, Maharashtra</p>
+                        <a href="https://maps.app.goo.gl/8Nt8FFUZRo3m135M8" target="_blank" class="btn btn-primary">View Location</a>
+                        </div>
+                        </div>
+                        </div>
+                        </ul>
+
+<!-- Add more hospitals as needed -->
+                        </div>
+                        <div id="map"></div>
+                        </div>
+                        
+<!-- Bootstrap JS -->
+                        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+                            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+                            crossorigin="anonymous">
+                        
+                        </script>
+                        </body>
+                        </html>
+            

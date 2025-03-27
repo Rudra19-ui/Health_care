@@ -1,0 +1,45 @@
+{% load static %}  <!-- Add this at the top -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Chatbot</title>
+    <!-- Update CSS reference to use Django static -->
+    <link rel="stylesheet" href="{% static 'appointments/new_folder/chatbot/style1.css' %}">
+    <!-- Add Bootstrap for consistency -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+    <!-- Add a back button -->
+    <div class="container mt-3">
+        <a href="{% url 'home' %}" class="btn btn-outline-primary mb-3">
+            <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
+    </div>
+    
+    <div class="chatbot-container">
+        <div class="chatbot-header">
+            <h2><i class="fas fa-robot"></i> Healthcare Chatbot</h2>
+        </div>
+        <div class="chatbot-body" id="chatbot-body">
+            <!-- Chat messages will appear here -->
+            <div class="chatbot-message bot-message">
+                Hi! I'm your healthcare assistant. How can I help you today?
+            </div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="user-input" placeholder="Type your message..." class="form-control">
+            <button id="send-btn" class="btn btn-primary">Send <i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <!-- Update JS reference to use Django static -->
+    <script src="{% static 'appointments/new_folder/chatbot/script.js' %}"></script>
+    
+    <!-- Add Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

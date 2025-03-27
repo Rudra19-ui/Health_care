@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import JsonResponse
 from .models import Appointment
+from .models import Doctor  
 
 
 def schedule_appointment(request):
@@ -29,6 +30,7 @@ def schedule_appointment(request):
 
     return render(request, 'appointments/schedule.html')
 
+
 def admin_view(request):
     # Get all appointments grouped by service type
     appointments = {
@@ -37,3 +39,12 @@ def admin_view(request):
         'Dermatological Skin Exam': Appointment.objects.filter(service_type='Dermatological Skin Exam'),
     }
     return render(request, 'appointments/admin.html', {'appointments': appointments})
+
+
+def ai_doctor_chatbot(request):
+    # Render the AI Doctor chatbot page
+    return render(request, 'appointments/new_folder/chatbot/index1.html')
+
+def doctors_list(request):
+    doctors = Doctor.objects.all()
+    return render(request, 'appointments/new_folder/doctors.html', {'doctors': doctors})
