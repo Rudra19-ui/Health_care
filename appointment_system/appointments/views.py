@@ -1,7 +1,10 @@
 from django.shortcuts import render, redirect
 from django.http import JsonResponse
 from .models import Appointment
+<<<<<<< HEAD
 from .models import Doctor  
+=======
+>>>>>>> cae47a086aed8325146460eb9077d1a42a3fb10b
 
 
 def schedule_appointment(request):
@@ -30,7 +33,10 @@ def schedule_appointment(request):
 
     return render(request, 'appointments/schedule.html')
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cae47a086aed8325146460eb9077d1a42a3fb10b
 def admin_view(request):
     # Get all appointments grouped by service type
     appointments = {
@@ -39,6 +45,7 @@ def admin_view(request):
         'Dermatological Skin Exam': Appointment.objects.filter(service_type='Dermatological Skin Exam'),
     }
     return render(request, 'appointments/admin.html', {'appointments': appointments})
+<<<<<<< HEAD
 
 
 def ai_doctor_chatbot(request):
@@ -48,3 +55,5 @@ def ai_doctor_chatbot(request):
 def doctors_list(request):
     doctors = Doctor.objects.all()
     return render(request, 'appointments/new_folder/doctors.html', {'doctors': doctors})
+=======
+>>>>>>> cae47a086aed8325146460eb9077d1a42a3fb10b

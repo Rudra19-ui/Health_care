@@ -1,5 +1,9 @@
 from django.db import models
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cae47a086aed8325146460eb9077d1a42a3fb10b
 class Appointment(models.Model):
     SERVICE_CHOICES = [
         ('Clinical Laboratory Test', 'Clinical Laboratory Test'),
@@ -15,6 +19,7 @@ class Appointment(models.Model):
 
     def __str__(self):
         return f"{self.name} - {self.service_type}"
+<<<<<<< HEAD
 
 
 class Doctor(models.Model):
@@ -37,3 +42,5 @@ class Doctor(models.Model):
 
     def __str__(self):
         return f"Dr. {self.name} - {self.specialization}"
+=======
+>>>>>>> cae47a086aed8325146460eb9077d1a42a3fb10b

@@ -55,7 +55,11 @@ ROOT_URLCONF = 'appointment_system.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+<<<<<<< HEAD
         'DIRS': [os.path.join(BASE_DIR, 'appointments/templates')],  # Add this line
+=======
+        'DIRS': [os.path.join(BASE_DIR, 'new_folder')],  # Add this line
+>>>>>>> cae47a086aed8325146460eb9077d1a42a3fb10b
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -117,15 +121,24 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
+<<<<<<< HEAD
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'appointments/static'),
     os.path.join(BASE_DIR, 'appointments/templates/appointments/new_folder'),
+=======
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'new_folder'),
+>>>>>>> cae47a086aed8325146460eb9077d1a42a3fb10b
 ]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+<<<<<<< HEAD
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+=======
+>>>>>>> cae47a086aed8325146460eb9077d1a42a3fb10b
